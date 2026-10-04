@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbour City Care - Charity Events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation menu (repeated on every page for easy navigation) -->
+    <nav class="main-nav">
+        <div class="container">
+            <a class="nav-brand" href="index.html"><span class="heart">&#10084;</span> Liuzhou Care</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="search.html">Search Events</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero: static organisation information (hard-coded, as required) -->
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to Liuzhou Care</h1>
+            <p class="mission">"No one in Liuzhou should face hardship alone."</p>
+            <p>
+                Liuzhou Care is a local charitable organisation dedicated to supporting
+                vulnerable families and young people across Liuzhou. Together with the
+                Bright Futures Youth Foundation, we host charity events throughout the year -
+                fun runs, gala dinners, concerts, auctions and more - to raise funds and
+                awareness for the causes that matter most. Browse our events below and
+                join us in making a difference.
+            </p>
+        </div>
+    </header>
+
+    <!-- Dynamic event listing: populated from the API by js/home.js -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>Charity Events</h2>
+                <p class="subtitle">Discover currently available and upcoming charity events in Liuzhou.</p>
+
+                <!-- Friendly messages (error / loading) shown with DOM manipulation -->
+                <div id="home-message" class="message message-error" role="alert"></div>
+
+                <!-- Event cards are injected here by JavaScript -->
+                <div id="event-list" class="event-grid"></div>
+            </div>
+        </section>
+
+        <!-- Static organisation details -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2>About Our Organisation</h2>
+                <p class="subtitle">Learn more about who we are and how to reach us.</p>
+                <div class="org-info">
+                    <div class="info-box">
+                        <h3>Our Mission</h3>
+                        <p>
+                            We provide food relief, housing support, and community programs
+                            for families doing it tough, and we partner with the Bright
+                            Futures Youth Foundation to mentor and support young people
+                            aged 12-25.
+                        </p>
+                    </div>
+                    <div class="info-box">
+                        <h3>Why We Host Events</h3>
+                        <p>
+                            Every ticket purchased at our events becomes a donation. From a
+                            homemade cake at a bake sale to a gala dinner table, your
+                            participation directly funds our programs across the city.
+                        </p>
+                    </div>
+                    <div class="info-box" id="contact">
+                        <h3>Contact Us</h3>
+                        <p>
+                            Email: hello@liuzhoucare.org<br>
+                            Phone: +86 772 5550 1234<br>
+                            Address: 12 Binjiang East Road, Chengzhong District, Liuzhou, Guangxi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Liuzhou Care. Registered charitable organisation. All donations make a difference.
+        </div>
+    </footer>
+
+    <!-- Shared API helper, then the page script -->
+    <script src="js/api.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

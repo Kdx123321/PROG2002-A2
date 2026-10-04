@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Events - Liuzhou Care</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation menu (same on every page) -->
+    <nav class="main-nav">
+        <div class="container">
+            <a class="nav-brand" href="index.html"><span class="heart">&#10084;</span> Liuzhou Care</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html" class="active">Search Events</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>Search Charity Events</h2>
+                <p class="subtitle">
+                    Find events by date, location, or category - select one or combine several criteria.
+                </p>
+
+                <!-- Filtering form: date + location + category -->
+                <form id="search-form" class="search-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="filter-date">Event Date</label>
+                            <input type="date" id="filter-date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="filter-location">Location</label>
+                            <input type="text" id="filter-location" name="location"
+                                   placeholder="e.g. Botanic Gardens, Community Hall">
+                        </div>
+                        <div class="form-group">
+                            <label for="filter-category">Event Category</label>
+                            <!-- Options are loaded dynamically from GET /api/categories -->
+                            <select id="filter-category" name="category">
+                                <option value="">All categories</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Search Events</button>
+                        <button type="button" id="clear-filters" class="btn btn-outline">Clear Filters</button>
+                    </div>
+                </form>
+
+                <!-- Error / info messages displayed with DOM manipulation -->
+                <div id="search-message" class="message message-error" role="alert"></div>
+
+                <!-- Search results are injected here by js/search.js -->
+                <div id="search-results" class="event-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Liuzhou Care. Registered charitable organisation. All donations make a difference.
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

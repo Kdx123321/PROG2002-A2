@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Liuzhou Care</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation menu (same on every page) -->
+    <nav class="main-nav">
+        <div class="container">
+            <a class="nav-brand" href="index.html"><span class="heart">&#10084;</span> Liuzhou Care</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Events</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+
+                <!-- Error message (e.g. invalid or suspended event id) -->
+                <div id="detail-message" class="message message-error" role="alert"></div>
+
+                <!-- The full event details are injected here by js/event.js.
+                     The skeleton below shows the intended layout. -->
+                <article id="detail-card" class="detail-card" style="display:none;">
+
+                    <img id="detail-image" class="detail-hero" alt="Event image">
+
+                    <div class="detail-body">
+                        <span id="detail-category" class="badge badge-category"></span>
+                        <span id="detail-status" class="badge"></span>
+                        <h1 id="detail-name"></h1>
+                        <p id="detail-organisation" class="card-meta"></p>
+
+                        <!-- Key facts: time, place, purpose -->
+                        <div class="detail-facts">
+                            <div class="fact"><strong>Date &amp; Time</strong><span id="detail-date"></span></div>
+                            <div class="fact"><strong>Location</strong><span id="detail-location"></span></div>
+                            <div class="fact"><strong>Purpose</strong><span id="detail-purpose"></span></div>
+                            <div class="fact"><strong>Organised by</strong><span id="detail-org-name"></span></div>
+                        </div>
+
+                        <!-- Full description -->
+                        <div class="detail-section">
+                            <h2>About This Event</h2>
+                            <p id="detail-description"></p>
+                        </div>
+
+                        <!-- Goal vs progress -->
+                        <div class="detail-section">
+                            <h2>Fundraising Goal</h2>
+                            <div class="progress-wrap">
+                                <div id="detail-progress" class="progress-bar"></div>
+                            </div>
+                            <p id="detail-progress-label" class="progress-label"></p>
+                        </div>
+
+                        <!-- Ticket information + registration form -->
+                        <div class="detail-section">
+                            <h2>Tickets &amp; Registration</h2>
+                            <div class="ticket-box">
+                                <p class="price" id="detail-price"></p>
+                                <p id="detail-ticket-info"></p>
+                                <br>
+                                <button id="register-btn" class="btn btn-primary btn-block" type="button">
+                                    Register for This Event
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <p style="margin-top: 20px;">
+                    <a href="index.html" class="btn btn-outline">&larr; Back to All Events</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal dialog shown by the Register button -->
+    <div id="register-modal" class="modal-overlay" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <h2>Coming Soon</h2>
+            <p>This feature is currently under construction.</p>
+            <button id="modal-close" class="btn btn-primary" type="button">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Liuzhou Care. Registered charitable organisation. All donations make a difference.
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/event.js"></script>
+</body>
+</html>
