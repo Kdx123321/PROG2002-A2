@@ -22,7 +22,7 @@ body {
 
 /* ---------- Navigation menu (present on every page) ---------- */
 .main-nav {
-    background-color: #0f4c4c;
+    background-color: #5c1a3a;
     padding: 14px 0;
     position: sticky;
     top: 0;
@@ -81,7 +81,7 @@ body {
 
 /* ---------- Hero / header banner ---------- */
 .hero {
-    background: linear-gradient(135deg, #0f4c4c 0%, #1c6b6b 60%, #2a8a82 100%);
+    background: linear-gradient(135deg, #5c1a3a 0%, #872d5a 60%, #ab4a7b 100%);
     color: #ffffff;
     padding: 64px 0;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 .section h2 {
-    color: #0f4c4c;
+    color: #5c1a3a;
     font-size: 1.7rem;
     margin-bottom: 6px;
 }
@@ -175,8 +175,8 @@ body {
 }
 
 .badge-category {
-    background-color: #e0f2f1;
-    color: #0f4c4c;
+    background-color: #f0dde7;
+    color: #5c1a3a;
 }
 
 .badge-upcoming {
@@ -219,12 +219,12 @@ body {
 
 .btn-outline {
     background-color: transparent;
-    color: #0f4c4c;
-    border: 2px solid #0f4c4c;
+    color: #5c1a3a;
+    border: 2px solid #5c1a3a;
 }
 
 .btn-outline:hover {
-    background-color: #0f4c4c;
+    background-color: #5c1a3a;
     color: #ffffff;
 }
 
@@ -251,7 +251,7 @@ body {
 .form-group label {
     display: block;
     font-weight: bold;
-    color: #0f4c4c;
+    color: #5c1a3a;
     margin-bottom: 6px;
     font-size: 0.92rem;
 }
@@ -345,7 +345,7 @@ body {
 
 .detail-facts .fact strong {
     display: block;
-    color: #0f4c4c;
+    color: #5c1a3a;
     margin-bottom: 2px;
 }
 
@@ -354,7 +354,7 @@ body {
 }
 
 .detail-section h2 {
-    color: #0f4c4c;
+    color: #5c1a3a;
     font-size: 1.2rem;
     margin-bottom: 8px;
 }
@@ -421,7 +421,7 @@ body {
 }
 
 .modal-box h2 {
-    color: #0f4c4c;
+    color: #5c1a3a;
     margin-bottom: 12px;
 }
 
@@ -444,13 +444,13 @@ body {
 }
 
 .org-info .info-box h3 {
-    color: #0f4c4c;
+    color: #5c1a3a;
     margin-bottom: 8px;
     font-size: 1.05rem;
 }
 
 footer {
-    background-color: #0f4c4c;
+    background-color: #5c1a3a;
     color: #d8efec;
     text-align: center;
     padding: 22px 0;
